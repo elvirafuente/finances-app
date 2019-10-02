@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    &:focus{
+        border: 0;
+        outline: none;
+    }
+}
+
+h1{
+    color:white
+}
+
+body{
+    background-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
+    height: 100vh;
+    // color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+#root{
+    height: 100%;
+}
+
+.app__tittle{
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.btn__default{
+    background-color:#b6e6ee17;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px;
+    color: white;
+    &:hover{
+        color:#00a1ba;
+        background-color: #fff;
+        cursor: pointer;
+    }
+}
+
+.landing__icon {
+    font-size: 20px;
+}
+
+.btn__icon{
+    font-size: 50px;
+
+    margin: 0 auto
+}
+
+.btn__text{
+    font-size: 20px;
+    font-weight: 700;
+    padding:5px 0 0;
+    text-align: center;
+}
+
+.btn__menu{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    background-color:#b6e6ee33;
+    padding: 15px 15px;
+    margin: 15px;
+    border-radius: 15px;
+    color: white;
+    &:hover{
+        color:#00a1ba;
+        background-color: #fff;
+        cursor: pointer;
+    }
+    & .btn__icon{
+        font-size: 30px;
+    }
+    &-open{
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+        background-color:#b6e6ee33;
+        padding: 10px 10px;
+        margin: 15px;
+        border-radius: 15px;
+        background-color:#c5ebec73;
+        color:#00a1ba;
+        &:hover{
+            color:white;
+            background-color: #00a1ba;
+            cursor: pointer;
+        }
+        & .btn__icon{
+            font-size: 30px;
+        }
+    }
+}
+
+.primary{
+    color:#00a1ba;
+    background-color: #fff;
+    &:hover{
+        background-color:#c5ebec73; 
+    }
+}
+
+.section{
+    background-color: #fff;
+    height: 100%;
+}
+
+.pivot__title{
+    color: #6d327c
+}
+
+.input{
+    border: 1px solid #00839d3f;
+    outline: none;
+    border-radius: 5px;
+}
+
+.ms-TextField-fieldGroup{
+    border: 0;
+}
+
+.main{
+    height: 100%;
+    margin-top: 20px;
+}
