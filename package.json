@@ -2,6 +2,7 @@
   "name": "budget-friendly",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@uifabric/styling": "^7.7.2",
     "node-sass": "^4.12.0",
