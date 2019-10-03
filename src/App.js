@@ -45,11 +45,19 @@ function App() {
       'burger': <i className="fas fa-hamburger"></i>,
       'door-open' : <i className="fas fa-door-open"></i>,
       'door-close' : <i className="fas fa-door-closed"></i>,
-      'piggy-bank' : <i class="fas fa-piggy-bank"></i>,
-      'wallet' : <i class="fas fa-wallet"></i> ,
-      'robot' : <i class="fas fa-robot"></i>,
-      'palette' : <i class="fas fa-palette"></i>,
-      'calendar' : <i class="far fa-calendar-alt"></i>
+      'piggy-bank' : <i className="fas fa-piggy-bank"></i>,
+      'wallet' : <i className="fas fa-wallet"></i> ,
+      'robot' : <i className="fas fa-robot"></i>,
+      'palette' : <i className="fas fa-palette"></i>,
+      'calendar' : <i className="far fa-calendar-alt"></i>,
+      'calculator' : <i className="fas fa-calculator"></i>,
+      'cliplist' : <i className="fas fa-clipboard-list"></i>,
+      'shopping-basket' : <i className="fas fa-shopping-basket"></i>,
+      'pet': <i className="fas fa-paw"></i>,
+      'car': <i class="fas fa-car"></i>,
+      'glass-cheers': <i class="fas fa-glass-cheers"></i>,
+      'health': <i class="fas fa-heartbeat"></i>,
+      'save' : <i className="fas fa-save"></i>
     }
   })
 

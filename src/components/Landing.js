@@ -16,14 +16,14 @@ export default function Landing (){
 
     return (
         <Stack tokens={{ childrenGap: 5 }} verticalAlign='space-evenly' styles={stackStyles} horizontalAlign='center' >
-            <Stack horizontal horizontalAlign='center' verticalAlign='end'>
+            <Stack horizontal horizontalAlign='center' verticalAlign='end' styles={{root:{marginTop: 30}}}>
                 <Image src={logo} alt="logo" width='20%' />
                 <h1 className="app__tittle">budget friendly</h1>
             </Stack>
             <Stack>
                 <Link to="/dashboard/add"> 
                     <Stack className='btn__default'>
-                        <FontIcon iconName='file-invoice-dollar' className='btn__icon'/>
+                        <FontIcon iconName='cliplist' className='btn__icon'/>
                         <Text className='btn__text'>add record</Text>
                     </Stack>
                 </Link>

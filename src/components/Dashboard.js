@@ -24,7 +24,7 @@ export default function Dashboard (){
             <>
                 <Link to="/dashboard/add" onClick={()=> setMenuIsOpen(false)} > 
                     <Stack className='btn__default primary' >
-                        <FontIcon iconName='file-invoice-dollar' className='btn__icon'/>
+                        <FontIcon iconName='cliplist' className='btn__icon'/>
                         <Text className='btn__text'>add record</Text>
                     </Stack>
                 </Link>

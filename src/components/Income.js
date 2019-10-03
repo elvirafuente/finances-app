@@ -1,24 +1,34 @@
 import React from 'react';
 import { ChoiceGroup } from 'office-ui-fabric-react/lib/ChoiceGroup';
-import {  TextField, Stack } from 'office-ui-fabric-react';
+import {  TextField, Stack, PrimaryButton } from 'office-ui-fabric-react';
 import { DatePicker } from 'office-ui-fabric-react/lib/DatePicker';
 
 export default function Income () {
 
     const choiceGroupStyles = {
-        root:{ marginTop: '10px'}
+        root:{ margin: '20px 0', width: 320},
+        //applicationRole: {width: '100%'}
+    }
+
+    const datePickerStyles = {
+        iconName: 'robot',
+        root:{ margin: '20px 0'},
+     }
+
+    const quantityStyles = {
+        root:{ margin: '20px 0', color: '#619FB1'},
     }
 
     return (
         <>
-        <Stack verticalAlign='center' className='main' grow={1}>
+        <Stack verticalAlign='center' grow={1} styles={{root: {width: '100%'}}}>
             <ChoiceGroup 
                 label="Source of income"
                 defaultSelectedKey="day"
                 options={[
                     {
                         key: 'job',
-                        iconProps: { iconName: 'robot', root: {color: 'red'} },
+                        iconProps: { iconName: 'robot'},
                         text: 'Job'
                     },
                     {
@@ -32,13 +42,14 @@ export default function Income () {
             />
             <DatePicker 
                 placeholder="Select a date..."
-                styles={{icon: 'calendar'}}
-                className='input'
-
+                styles={datePickerStyles}
+                label='Date'
+                borderless
             />
-            <TextField label="Quantity" className='input' type="number"/>
-            <TextField label="Description" multiline rows={3} className='input'/>
-            </Stack>
+            <TextField borderless label="Quantity" className='input' type="number" iconProps={{iconName: 'calculator'}} styles={quantityStyles}/>
+            <TextField borderless label="Description" multiline rows={3} className='input' styles={{root:{margin: '0 0 10px 0'}}} />
+            <PrimaryButton text="Save" iconProps={{iconName: 'save'}} styles={{root: {width: '100px'}}}/>
+        </Stack>
         </>
     )
 }

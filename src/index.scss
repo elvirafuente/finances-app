@@ -24,7 +24,7 @@ body{
 }
 
 #root{
-    height: 100%;
+    // height: 100%;
 }
 
 .app__tittle{
@@ -106,30 +106,33 @@ body{
     color:#00a1ba;
     background-color: #fff;
     &:hover{
-        background-color:#c5ebec73; 
+        background-color:#c5ebec73;
     }
 }
 
 .section{
     background-color: #fff;
-    height: 100%;
+    margin:15px;
+    border-radius: 15px;
+    padding:0px 10px 15px;
 }
 
 .pivot__title{
     color: #6d327c
 }
 
-.input{
+.fieldGroup-90, .field-102{
     border: 1px solid #00839d3f;
-    outline: none;
     border-radius: 5px;
 }
 
-.ms-TextField-fieldGroup{
-    border: 0;
+.field-91:focus{
+    border: 1px solid #00839d3f;
+    border-radius: 5px;
 }
 
-.main{
-    height: 100%;
-    margin-top: 20px;
+
+
+.choice-group{
+    font-size: 10px;
 }
