@@ -23,44 +23,44 @@ export default function Expence () {
     return (
         <Stack verticalAlign='center' grow={1}>
             <ChoiceGroup 
-                label="Source of income"
+                label="Type of expence"
                 defaultSelectedKey="day"
                 options={[
                     {
                         key: 'bills',
                         iconProps: { iconName: 'file-invoice-dollar', styles: {fontSize: 10}},
                         text: 'Bills',
-                        styles: {iconWrapper: {fontSize: 25}, labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 25px'}, field: {padding:10} }                  
+                        styles: {iconWrapper: {fontSize: 25}, labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 15px'}, field: {padding:10} }                  
                     },
                     {
                         key: 'food-home',
                         iconProps: { iconName: 'shopping-basket'},
                         text: 'Food',
-                        styles: {iconWrapper: {fontSize: 25},  labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 25px'}, field: {padding:10} }                  
+                        styles: {iconWrapper: {fontSize: 25},  labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 15px'}, field: {padding:10} }                  
                     },
                     {
                         key: 'pet',
                         iconProps: { iconName: 'pet'},
                         text: 'Pet',
-                        styles: {iconWrapper: {fontSize: 25},  labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 25px'}, field: {padding:10} }                  
+                        styles: {iconWrapper: {fontSize: 25},  labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 15px'}, field: {padding:10} }                  
                     },
                     {
                         key: 'transport',
                         iconProps: { iconName: 'car'},
                         text: 'Transport',
-                        styles: {iconWrapper: {fontSize: 25},  labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 25px'}, field: {padding:10} }                  
+                        styles: {iconWrapper: {fontSize: 25},  labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 15px'}, field: {padding:10} }                  
                     },
                     {
                         key: 'social',
                         iconProps: { iconName: 'glass-cheers'},
                         text: 'Social',
-                        styles: {iconWrapper: {fontSize: 25},  labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 25px'}, field: {padding:10} }                  
+                        styles: {iconWrapper: {fontSize: 25},  labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 15px'}, field: {padding:10} }                  
                     },
                     {
                         key: 'health',
                         iconProps: { iconName: 'health'},
                         text: 'Health',
-                        styles: {iconWrapper: {fontSize: 25},  labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 25px'}, field: {padding:10} }                  
+                        styles: {iconWrapper: {fontSize: 25},  labelWrapper: {fontSize: 14, paddingTop: 0, height: 15}, innerField: {padding: '0 15px'}, field: {padding:10} }                  
                     },
                 ]}
                 styles={choiceGroupStyles}

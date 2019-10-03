@@ -18,14 +18,12 @@ h1{
 
 body{
     background-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
-    min-height: 100vmax;
-    // color: white;
-    display: flex;
     font-family: 'Raleway', sans-serif;
 }
 
-#root{
+html, body, #root{
     height: 100%;
+    overflow: hidden;
 }
 
 .app__tittle{

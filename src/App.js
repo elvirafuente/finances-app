@@ -54,10 +54,12 @@ function App() {
       'cliplist' : <i className="fas fa-clipboard-list"></i>,
       'shopping-basket' : <i className="fas fa-shopping-basket"></i>,
       'pet': <i className="fas fa-paw"></i>,
-      'car': <i class="fas fa-car"></i>,
-      'glass-cheers': <i class="fas fa-glass-cheers"></i>,
-      'health': <i class="fas fa-heartbeat"></i>,
-      'save' : <i className="fas fa-save"></i>
+      'car': <i className="fas fa-car"></i>,
+      'glass-cheers': <i className="fas fa-glass-cheers"></i>,
+      'health': <i className="fas fa-heartbeat"></i>,
+      'save' : <i className="fas fa-save"></i>,
+      'up': <i className="fas fa-chevron-up"></i>,
+      'down': <i className="fas fa-chevron-down"></i>
     }
   })
 
