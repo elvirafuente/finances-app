@@ -67,13 +67,12 @@ export default function Expence () {
                 className="choice-group"
             />
             <DatePicker 
-                placeholder="Select a date..."
                 styles={datePickerStyles}
                 label='Date'
-                borderless
+                underlined
             />
-            <TextField borderless label="Quantity" className='input' type="number" iconProps={{iconName: 'calculator'}} styles={quantityStyles}/>
-            <TextField borderless label="Description" multiline rows={3} className='input' styles={{root:{margin: '0 0 10px 0'}}} />
+            <TextField underlined label="Quantity" className='input' type="number" iconProps={{iconName: 'calculator'}} styles={quantityStyles}/>
+            <TextField underlined label="Description" multiline rows={3} className='input' styles={{root:{margin: '0 0 10px 0'}}} />
             <PrimaryButton text="Save" iconProps={{iconName: 'save'}} styles={{root: {width: '100px'}}}/>
         </Stack>
     )

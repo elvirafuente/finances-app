@@ -83,27 +83,23 @@ export default function Income () {
                 onChange={handleSource}
             />
             <DatePicker 
-                placeholder="Select a date..."
                 styles={datePickerStyles}
                 label='Date'
-                borderless
+                underlined
                 onSelectDate={handleDate}
             />
             <TextField 
-                borderless 
+                underlined 
                 label="Quantity" 
-                className='input' 
                 type="number" 
                 iconProps={{iconName: 'calculator'}} 
                 styles={quantityStyles}
                 onChange={handleQuantity}
             />
             <TextField 
-                borderless 
+                underlined 
                 label="Description" 
                 multiline 
-                rows={2} 
-                className='input' 
                 styles={{root:{margin: '0 0 10px 0'}}}
                 onChange={handleDescription}
             />
