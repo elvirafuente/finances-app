@@ -27,10 +27,10 @@ export default function Activity () {
             ariaLabel: 'Press to sort',
             fieldName: 'source',
             iconName: 'plug',
-            isIconOnly: false,
+            isIconOnly: true,
             iconClassName: 'icon-list',
-            minWidth: 60,
-            maxWidth: 70,
+            minWidth: 10,
+            maxWidth: 10,
             isPadded: false
         },
         {
@@ -85,24 +85,24 @@ export default function Activity () {
 
     const paintItemColumn = (item,index, column) =>{
         const typeText = item.type==='income'? 'Ingreso' : 'Gasto'
-        let sourceText = ''
-        if(item.source==='job'){
-            sourceText = 'Empleo principal'
-        } else if(item.source==='side hustle'){
-            sourceText = 'Actividad paralela'
-        } else if(item.source==='groceries'){
-            sourceText = 'Comida'
-        } else if(item.source==='pet'){
-            sourceText = 'Mascota'
-        } else if(item.source==='transport'){
-            sourceText = 'Transporte'
-        } else if(item.source==='social'){
-            sourceText = 'Social'
-        } else if(item.source==='health'){
-            sourceText = 'Salud'
-        } else if(item.source==='bill'){
-            sourceText = 'Factura'
-        }
+        // let sourceText = ''
+        // if(item.source==='job'){
+        //     sourceText = 'Empleo principal'
+        // } else if(item.source==='side hustle'){
+        //     sourceText = 'Actividad paralela'
+        // } else if(item.source==='groceries'){
+        //     sourceText = 'Comida'
+        // } else if(item.source==='pet'){
+        //     sourceText = 'Mascota'
+        // } else if(item.source==='transport'){
+        //     sourceText = 'Transporte'
+        // } else if(item.source==='social'){
+        //     sourceText = 'Social'
+        // } else if(item.source==='health'){
+        //     sourceText = 'Salud'
+        // } else if(item.source==='bill'){
+        //     sourceText = 'Factura'
+        // }
 
 
         switch (column.key){
@@ -113,7 +113,7 @@ export default function Activity () {
             
                 case 'source':
                         return (
-                            <span className={item.type==='income'? 'green': 'purple'} ><FontIcon iconName={item.source}/> {sourceText}</span>
+                            <span className={item.type==='income'? 'green': 'purple'} ><FontIcon iconName={item.source}/></span>
                         );
                 case 'date':
                         return (

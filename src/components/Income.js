@@ -97,7 +97,6 @@ export default function Income () {
             <TextField 
                 underlined 
                 label="Descripción" 
-                multiline 
                 styles={{root:{margin: '0 0 10px 0'}}}
                 onChange={handleDescription}
                 value={inputObject.description}

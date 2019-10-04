@@ -22,9 +22,9 @@ export const ProviderBudget = ({children}) => {
         id: '',
         date: {
             completeDate: new Date(),
-            day: '',
-            month: '',
-            year: '',
+            day: new Date().getDate(),
+            month: new Date().getMonth()+1,
+            year: new Date().getFullYear(),
         },
         type: 'income',
         source: '',

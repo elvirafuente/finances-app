@@ -125,8 +125,6 @@ export default function Expence () {
             <TextField 
                 underlined 
                 label="Descripción" 
-                multiline 
-                rows={3} 
                 className='input' 
                 styles={{root:{margin: '0 0 10px 0'}}} 
                 onChange={handleDescription}
