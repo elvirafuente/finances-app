@@ -17,8 +17,9 @@ export default function Activity () {
             iconName: 'sticky-note',
             isIconOnly: false,
             iconClassName: 'icon-list',
-            minWidth: 80,
-            maxWidth: 100
+            minWidth: 60,
+            maxWidth: 60,
+            isPadded: false
         },
         {
             key: 'source',
@@ -28,8 +29,9 @@ export default function Activity () {
             iconName: 'plug',
             isIconOnly: false,
             iconClassName: 'icon-list',
-            minWidth: 80,
-            maxWidth: 100
+            minWidth: 60,
+            maxWidth: 70,
+            isPadded: false
         },
         {
             key: 'date',
@@ -39,8 +41,9 @@ export default function Activity () {
             iconName: 'calendar',
             isIconOnly: false,
             iconClassName: 'icon-list',
-            minWidth: 80,
-            maxWidth: 100
+            minWidth: 60,
+            maxWidth: 70,
+            isPadded: false
         },
         {
             key: 'quantity',
@@ -50,18 +53,20 @@ export default function Activity () {
             iconName: 'calculator',
             isIconOnly: false,
             iconClassName: 'icon-list',
-            minWidth: 80,
-            maxWidth: 100
+            minWidth: 60,
+            maxWidth: 70,
+            isPadded: false
         },
-        {
-            key: 'description',
-            name: 'Descripción',
-            ariaLabel: 'Press to sort',
-            fieldName: 'description',
-            iconName: 'calculator',
-            isIconOnly: false,
-            iconClassName: 'icon-list'
-        },
+        // {
+        //     key: 'description',
+        //     name: 'Descripción',
+        //     ariaLabel: 'Press to sort',
+        //     fieldName: 'description',
+        //     iconName: 'calculator',
+        //     isIconOnly: false,
+        //     iconClassName: 'icon-list',
+        //     isPadded: false
+        // },
         
     ]
     
@@ -71,7 +76,7 @@ export default function Activity () {
                 key: item.id,
                 type: item.type,
                 source: item.source,
-                date: item.date.completeDate.toString(),
+                date: `${item.date.day}/${item.date.month}/${item.date.year}`,
                 quantity: item.quantity,
                 description: item.description,             
             }
@@ -136,11 +141,16 @@ export default function Activity () {
         <>
         <Stack horizontalAlign='start' className='section'>
             <DetailsList
+                //compact={true}
                 items={items}
                 //styles={{headerWrapper: {backgroundColor: 'red'}}}
                 columns={columns}
                 onRenderItemColumn={paintItemColumn}
                 onActiveItemChanged={selectItem}
+                selectionMode='none'
+                checkboxVisibility={2}
+                //cellStyleProps={{cellLeftPadding:0, cellRightPadding:0 } }
+                //styles={{cellTitle:{padding: 0}}}
             />
         </Stack>
         </>
