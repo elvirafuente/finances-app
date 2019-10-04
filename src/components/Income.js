@@ -7,7 +7,7 @@ import { ContextBudget } from '../context/ContextBudget'
 
 export default function Income () {
 
-    const {data, setData, objectModel, setObjectModel, saveInput} = useContext(ContextBudget)
+    const {data, setData, inputObject, saveInput, setInputObject, objectModel} = useContext(ContextBudget)
 
 
     const choiceGroupStyles = {
@@ -25,11 +25,6 @@ export default function Income () {
 
     const handleSource = ( e , opt)=>{
         saveInput('source', opt.key)
-        // const newObject = {
-        //     ...objectModel,
-        //     source: opt.key
-        // }
-        // setObjectModel(newObject)
     }
 
     const handleDate = date =>{
@@ -44,7 +39,7 @@ export default function Income () {
 
     const handleQuantity = ({target}) =>{
         const {value} = target
-        saveInput('quantity', value)
+        saveInput('quantity', parseFloat(value))
     }
 
     const handleDescription = ({target}) =>{
@@ -54,10 +49,11 @@ export default function Income () {
 
     const handleSave = () => {
         const newId = !data.length ? 1 : (data[data.length-1].id + 1);
-        saveInput('id', newId)
-        const newObject = {...objectModel, id: newId}
+        //saveInput('id', newId)
+        const newObject = {...inputObject, id: newId}
         const newArray = [...data].concat(newObject);
         setData(newArray)
+        setInputObject(objectModel)
     }
 
 
@@ -65,18 +61,18 @@ export default function Income () {
         <>
         <Stack verticalAlign='center' grow={1} styles={{root: {width: '100%'}}}>
             <ChoiceGroup 
-                label="Source of income"
-                defaultSelectedKey="day"
+                label="Fuente de ingreso"
+                selectedKey={inputObject.source}
                 options={[
                     {
                         key: 'job',
-                        iconProps: { iconName: 'robot'},
-                        text: 'Job',
+                        iconProps: { iconName: 'job'},
+                        text: 'Empleo principal',
                     },
                     {
                         key: 'side hustle',
-                        iconProps: { iconName: 'palette' },
-                        text: 'Side hustle',
+                        iconProps: { iconName: 'side hustle' },
+                        text: 'Actividad paralela',
                     },
                 ]}
                 styles={choiceGroupStyles}
@@ -84,27 +80,30 @@ export default function Income () {
             />
             <DatePicker 
                 styles={datePickerStyles}
-                label='Date'
+                label='Fecha'
                 underlined
                 onSelectDate={handleDate}
+                value={inputObject.date.completeDate}
             />
             <TextField 
                 underlined 
-                label="Quantity" 
+                label="Cantidad" 
                 type="number" 
                 iconProps={{iconName: 'calculator'}} 
                 styles={quantityStyles}
                 onChange={handleQuantity}
+                value={inputObject.quantity}
             />
             <TextField 
                 underlined 
-                label="Description" 
+                label="Descripción" 
                 multiline 
                 styles={{root:{margin: '0 0 10px 0'}}}
                 onChange={handleDescription}
+                value={inputObject.description}
             />
             <PrimaryButton 
-                text="Save" 
+                text="Guardar" 
                 iconProps={{iconName: 'save'}} 
                 styles={{root: {width: '100px'}}}
                 onClick={handleSave}

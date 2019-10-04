@@ -25,19 +25,19 @@ export default function Dashboard (){
                 <Link to="/dashboard/add" onClick={()=> setMenuIsOpen(false)} > 
                     <Stack className='btn__default primary' >
                         <FontIcon iconName='cliplist' className='btn__icon'/>
-                        <Text className='btn__text'>add record</Text>
+                        <Text className='btn__text'>añadir registro</Text>
                     </Stack>
                 </Link>
                 <Link to="/dashboard/activity" onClick={()=> setMenuIsOpen(false)} > 
                     <Stack className='btn__default primary' >
                         <FontIcon iconName='chart-line' className='btn__icon'/>
-                        <Text className='btn__text'>check activity</Text>
+                        <Text className='btn__text'>ver actividad</Text>
                     </Stack>
                 </Link>
                 <Link to="/dashboard/budget" onClick={()=> setMenuIsOpen(false)} > 
                     <Stack className='btn__default primary' >
                         <FontIcon iconName='sliders-h' className='btn__icon'/>
-                        <Text className='btn__text'>create budget</Text>
+                        <Text className='btn__text'>crear presupuesto</Text>
                     </Stack>
                 </Link>
             </>

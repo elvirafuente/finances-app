@@ -4,9 +4,21 @@ export const ContextBudget = createContext();
 
 export const ProviderBudget = ({children}) => {
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState([{
+        id: 1,
+        date: {
+            completeDate: new Date(),
+            day: '4',
+            month: '10',
+            year: '2019',
+        },
+        type: 'income',
+        source: 'job',
+        quantity: '125',
+        description: 'hgt fds',
+    }])
 
-    const [objectModel, setObjectModel] = useState({
+    const objectModel = {
         id: '',
         date: {
             completeDate: new Date(),
@@ -18,18 +30,20 @@ export const ProviderBudget = ({children}) => {
         source: '',
         quantity: '',
         description: '',
-    })
+    }
+
+    const [inputObject, setInputObject] = useState(objectModel)
 
     const saveInput = (key, value) =>{
         const newObject = {
-            ...objectModel,
+            ...inputObject,
             [key]: value
         }
-        setObjectModel(newObject)
+        setInputObject(newObject)
     }
 
     return (
-        <ContextBudget.Provider value={{data, setData, objectModel, setObjectModel, saveInput}}>
+        <ContextBudget.Provider value={{data, setData, inputObject, setInputObject, saveInput, objectModel}}>
             {children}
         </ContextBudget.Provider>
     )

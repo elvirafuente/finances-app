@@ -7,7 +7,7 @@ import { ContextBudget } from '../context/ContextBudget'
 
 export default function Add () {
 
-    const {saveInput} = useContext(ContextBudget)
+    const {saveInput, inputObject} = useContext(ContextBudget)
 
     const pivotStyles = {
         root: { marginTop: 10 },
@@ -20,11 +20,11 @@ export default function Add () {
     
     return (
         <Stack horizontalAlign='start' className='section'>
-            <Pivot linkSize={PivotLinkSize.large} styles={pivotStyles}  onLinkClick={handleType}>
-                <PivotItem headerText="Incomes" itemIcon="piggy-bank" itemKey='income'>
+            <Pivot linkSize={PivotLinkSize.large} styles={pivotStyles}  onLinkClick={handleType} selectedKey={inputObject.type}>
+                <PivotItem headerText="Ingresos" itemIcon="income" itemKey='income'>
                     <Income />
                 </PivotItem>
-                <PivotItem headerText="Expences" itemIcon="wallet" className='pivot__title' itemKey='expence'>
+                <PivotItem headerText="Gastos" itemIcon="expence" className='pivot__title' itemKey='expence'>
                     <Expence />
                 </PivotItem>
             </Pivot>

@@ -17,13 +17,18 @@ h1{
 }
 
 body{
-    background-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
     font-family: 'Raleway', sans-serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
-html, body, #root{
-    height: 100%;
-    overflow: hidden;
+#root{
+    background-image: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    min-width: 100%;
 }
 
 .app__tittle{
@@ -135,3 +140,15 @@ html, body, #root{
 // .choice-group{
 //     font-size: 10px;
 // }
+
+.icon-list {
+    margin: 0 5px 0 0;
+}
+
+.green{
+    color: green;
+}
+
+.purple{
+    color: purple;
+}
